@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Product Detail</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.png" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/themify/themify-icons.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/elegant-font/html-css/style.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<!--===============================================================================================-->
+</head>
+
+<body class="animsition" onload=produtosDestaque();montaPaginaDetalhes()>
+
+	<!-- Header -->
+	<header class="header1">
+		<!-- Header desktop -->
+		<div class="container-menu-header">
+			<div class="topbar">
+				<div class="topbar-social">
+					<a href="#" class="topbar-social-item fa fa-facebook"></a>
+					<a href="#" class="topbar-social-item fa fa-instagram"></a>
+					<a href="#" class="topbar-social-item fa fa-pinterest-p"></a>
+					<a href="#" class="topbar-social-item fa fa-snapchat-ghost"></a>
+					<a href="#" class="topbar-social-item fa fa-youtube-play"></a>
+				</div>
+				<div class="topbar-child2">
+
+				</div>
+			</div>
+			<div id="carrinho"></div>
+			<div class="wrap_header">
+				<!-- Logo -->
+				<a href="index.html" class="logo">
+					<h4 style="color:#000">Iverdure</h4>
+				</a>
+
+				<!-- Menu -->
+				<div class="wrap_menu">
+					<nav class="menu">
+						<ul class="main_menu">
+							<li>
+								<a href="index.html">Home</a>
+							</li>
+
+							<li>
+								<a href="product.html">Produtos</a>
+							</li>
+
+							<li>
+								<a href="about.html">Sobre</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+
+				<!-- Header Icon -->
+				<div class="header-icons">
+					<a href="#" class="header-wrapicon1 dis-block">
+						<img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
+
+					</a>
+					<a id="nomeuser"></a>
+					<span class="linedivide1"></span>
+					<a href="cart.html">
+					<div class="header-wrapicon2">
+						<img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+
+					</div>
+				</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- Header Mobile -->
+		<div class="wrap_header_mobile">
+			<!-- Logo moblie -->
+			<a href="index.html" class="logo-mobile">
+				<img src="images/icons/logo.png" alt="IMG-LOGO">
+			</a>
+
+			<!-- Button show menu -->
+			<div class="btn-show-menu">
+				<!-- Header Icon mobile -->
+				<div class="header-icons-mobile">
+					<a href="#" class="header-wrapicon1 dis-block">
+						<img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
+					</a>
+					<a id="nomeuser"></a>
+					<span class="linedivide2"></span>
+
+					
+						<a  href="cart.html" class="header-wrapicon1 dis-block">
+							<img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						</a>
+					
+				</div>
+
+				<div class="btn-show-menu-mobile hamburger hamburger--squeeze">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- Menu Mobile -->
+		<div class="wrap-side-menu">
+			<nav class="side-menu">
+				<ul class="main-menu">
+					<li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
+					</li>
+
+					<li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
+						<div class="topbar-child2-mobile">
+							<span class="topbar-email">
+								iVerdura
+							</span>
+						</div>
+					</li>
+
+					<li class="item-topbar-mobile p-l-10">
+						<div class="topbar-social-mobile">
+							<a href="#" class="topbar-social-item fa fa-facebook"></a>
+							<a href="#" class="topbar-social-item fa fa-instagram"></a>
+							<a href="#" class="topbar-social-item fa fa-pinterest-p"></a>
+							<a href="#" class="topbar-social-item fa fa-snapchat-ghost"></a>
+							<a href="#" class="topbar-social-item fa fa-youtube-play"></a>
+						</div>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="index.html">Home</a>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="product.html">Produtos</a>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="about.html">Sobre</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<!-- Product Detail -->
+	<div class="container bgwhite p-t-35 p-b-80">
+		<div class="flex-w flex-sb">
+			<div class="w-size13 p-t-30 respon5">
+				<div class="wrap-slick3 flex-sb flex-w">
+					<div class="wrap-slick3-dots"></div>
+
+					<div class="slick3">
+
+
+						<div class="item-slick3" data-thumb="images/thumb-item-03.jpg">
+
+
+							<div id="img-produto"></div>
+
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="w-size14 p-t-30 respon5">
+				<h4 class="product-detail-name m-text16 p-b-13">
+					<div id="nome-produto"></div>
+
+				</h4>
+				<div id="preco-produto"></div>
+
+				<div id="nome-fornecedor"></div>
+
+				<!--  -->
+				<div class="p-t-33 p-b-60">
+
+					<div class="flex-r-m flex-w p-t-10">
+						<div class="w-size16 flex-m flex-w">
+							<div class="flex-w bo5 of-hidden m-r-22 m-t-10 m-b-10">
+								<button class="btn-num-product-down color1 flex-c-m size7 bg8 eff2">
+									<i class="fs-12 fa fa-minus" aria-hidden="true"></i>
+								</button>
+
+								<input class="size8 m-text18 t-center num-product" type="number" name="num-product" value="1" id="quantidade">
+
+								<button class="btn-num-product-up color1 flex-c-m size7 bg8 eff2">
+									<i class="fs-12 fa fa-plus" aria-hidden="true"></i>
+								</button>
+							</div>
+
+							<div class="btn-addcart-product-detail size9 trans-0-4 m-t-10 m-b-10">
+								<!-- Button -->
+								<button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4" onclick="addCar()">
+									Add Carrinho
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="p-b-45">
+					<div id="codigo-produto"></div>
+
+				</div>
+
+				<!--  -->
+				<div class="wrap-dropdown-content bo6 p-t-15 p-b-14 active-dropdown-content">
+					<h5 class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4">
+						Descrição
+						<i class="down-mark fs-12 color1 fa fa-minus dis-none" aria-hidden="true"></i>
+						<i class="up-mark fs-12 color1 fa fa-plus" aria-hidden="true"></i>
+					</h5>
+
+					<div id="descricao"></div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Relate Product -->
+	<section class="relateproduct bgwhite p-t-45 p-b-138">
+		<div class="container">
+			<div class="sec-title p-b-60">
+				<h3 class="m-text5 t-center">
+					Produtos em destaque
+				</h3>
+			</div>
+
+			<div class="row">
+				<div>
+					<!-- Product -->
+					<div class="row" id="produtos-destaque">
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<div id="totalValue"></div>
+
+
+
+
+
+	<!-- Footer -->
+	<footer class="bg6 p-t-45 p-b-43 p-l-65 p-r-65 p-lr-0-xl1">
+		<div class="container">
+			<div class="flex-w p-b-90">
+				<div class="w-size6 p-t-30 p-l-15 p-r-15 respon6">
+					<h4 class="s-text12 p-b-30">
+						Entrar em Contato
+					</h4>
+
+					<div>
+						<p class="s-text7 w-size26">
+							Alameda jose de oliveira dos bosques Numero:468 Bairro Jardim Patricia (034) 98749-978754
+						</p>
+
+						<div class="flex-m p-t-30">
+							<a href="#" class="fs-18 color1 p-r-20 fa fa-facebook"></a>
+							<a href="#" class="fs-18 color1 p-r-20 fa fa-instagram"></a>
+							<a href="#" class="fs-18 color1 p-r-20 fa fa-pinterest-p"></a>
+							<a href="#" class="fs-18 color1 p-r-20 fa fa-snapchat-ghost"></a>
+							<a href="#" class="fs-18 color1 p-r-20 fa fa-youtube-play"></a>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="w-size7 p-t-30 p-l-15 p-r-15 respon7">
+					<h4 class="s-text12 p-b-30">
+						Links
+					</h4>
+
+					<ul>
+						<li class="p-b-9">
+							<a href="#" class="s-text7">
+								Home
+							</a>
+						</li>
+
+						<li class="p-b-9">
+							<a href="#" class="s-text7">
+								Sobre
+							</a>
+						</li>
+
+						<li class="p-b-9">
+							<a href="#" class="s-text7">
+								Contato
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="w-size7 p-t-30 p-l-15 p-r-15 respon7">
+					<h4 class="s-text12 p-b-30">
+						Ajuda
+					</h4>
+
+					<ul>
+						<li class="p-b-9">
+							<a href="#" class="s-text7">
+								Acompanhar Pedidos
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="w-size8 p-t-30 p-l-15 p-r-15 respon6">
+					<h4 class="s-text12 p-b-30">
+						Receber Promoções
+					</h4>
+
+					<form>
+						<div class="effect1 w-size9">
+							<input class="s-text7 bg6 w-full p-b-5" type="text" name="email" placeholder="email@example.com">
+							<span class="effect1-line"></span>
+						</div>
+
+						<div class="w-size2 p-t-20">
+							<!-- Button -->
+							<button class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
+								Enviar
+							</button>
+						</div>
+
+					</form>
+				</div>
+			</div>
+
+			<div class="t-center p-l-15 p-r-15">
+				<!--
+			<a href="#">
+				<img class="h-size2" src="images/icons/paypal.png" alt="IMG-PAYPAL">
+			</a>
+
+			<a href="#">
+				<img class="h-size2" src="images/icons/visa.png" alt="IMG-VISA">
+			</a>
+
+			<a href="#">
+				<img class="h-size2" src="images/icons/mastercard.png" alt="IMG-MASTERCARD">
+			</a>
+
+			<a href="#">
+				<img class="h-size2" src="images/icons/express.png" alt="IMG-EXPRESS">
+			</a>
+
+			<a href="#">
+				<img class="h-size2" src="images/icons/discover.png" alt="IMG-DISCOVER">
+			</a>
+-->
+				<div class="t-center s-text8 p-t-20">
+					Copyright © 2018 All rights reserved.
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- Back to top -->
+	<div class="btn-back-to-top bg0-hov" id="myBtn">
+		<span class="symbol-btn-back-to-top">
+			<i class="fa fa-angle-double-up" aria-hidden="true"></i>
+		</span>
+	</div>
+
+	<!-- Container Selection -->
+	<div id="dropDownSelect1"></div>
+	<div id="dropDownSelect2"></div>
+
+
+
+	<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/animsition/js/animsition.min.js"></script>
+	<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/bootstrap/js/popper.js"></script>
+	<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/select2/select2.min.js"></script>
+	<script type="text/javascript">
+		$(".selection-1").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+
+		$(".selection-2").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect2')
+		});
+	</script>
+	<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/slick/slick.min.js"></script>
+	<script type="text/javascript" src="js/slick-custom.js"></script>
+	<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/sweetalert/sweetalert.min.js"></script>
+	<script type="text/javascript">
+		$('.block2-btn-addcart').each(function () {
+			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+			$(this).on('click', function () {
+				swal(nameProduct, "is added to cart !", "success");
+			});
+		});
+
+		$('.block2-btn-addwishlist').each(function () {
+			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+			$(this).on('click', function () {
+				swal(nameProduct, "is added to wishlist !", "success");
+			});
+		});
+
+		$('.btn-addcart-product-detail').each(function () {
+			var nameProduct = $('.product-detail-name').html();
+			$(this).on('click', function () {
+				swal(nameProduct, "is added to wishlist !", "success");
+			});
+		});
+
+		var c = JSON.parse(sessionStorage.getItem("login"));
+		console.info(c);
+		if (!c) {
+			document.getElementById('nomeuser').innerHTML = '';
+		} else {
+			document.getElementById('nomeuser').innerHTML = c.nome;
+		}
+
+		function produtosDestaque() {
+
+			fetch('http://localhost:8080/v1/produto/listar')
+				.then((resposta) => {
+					return resposta.json();
+				})
+				.then((res) => {
+					let recebe = "";
+					let cont = 0;
+					res.forEach((elem) => {
+						if (cont < 3) {
+							recebe = recebe + '<div class="col-sm-12 col-md-6 col-lg-4 p-b-50">' +
+								'<div class="block2">' +
+								'<div class="block2-img wrap-pic-w of-hidden pos-relative">' +
+								'<img src="' + elem.urlImg + '"alt="IMG-PRODUCT">' +
+								'<div class="block2-overlay trans-0-4">' +
+								'<div class="block2-btn-addcart w-size1 trans-0-4">' +
+								'<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">' +
+								'<a style ="color:#fff"href="product-detail.html?idProduto=' + elem.idProduto + '&idFornecedor=' + elem.idFornecedor + '"class="block2-name dis-block s-text3 p-b-5">Detalhes' +
+								'</button>' +
+								'</div>' +
+								'</div>' +
+								'</div>' +
+								'<div class="block2-txt p-t-20">' +
+								'<a href="product-detail.html?idProduto=' + elem.idProduto + '&idFornecedor=' + elem.idFornecedor + '"class="block2-name dis-block s-text3 p-b-5">' + elem.nome + '</a>' +
+								'<span class="block2-price m-text6 p-r-5">' + 'R$ ' + elem.preco + '</span>' +
+								'</div>' +
+								'</div>' +
+								'</div>'
+							cont = cont + 1;
+						}
+					});
+
+					document.getElementById('produtos-destaque').innerHTML = recebe;
+
+				})
+		}
+
+
+		var aqui = null;
+		function montaPaginaDetalhes() {
+			var url = window.location.search.replace("?", "");
+			var items = url.split("&");
+
+			if (items.length == 2) {
+				var obj = {
+					'idProduto': items[0].split("=")[1],
+					'idFornecedor': items[1].split("=")[1]
+				}
+			}
+
+
+			fetch('http://localhost:8080/v1/produto/consulta/' + obj.idProduto + '/' + obj.idFornecedor)
+				.then((resposta) => {
+					return resposta.json();
+				})
+				.then((res) => {
+					aqui = res;
+					var descricao = '<div class="dropdown-content dis-none p-t-15 p-b-23">' +
+						'<p class="s-text8">Não existe descrição para este produto' +
+						'</p>' +
+						'</div>';
+
+					let recebe =
+						'<div class="wrap-pic-w">' +
+						'<img src="' + res.urlImg + '"alt="IMG-PRODUCT">' +
+						'</div>'
+					let nome = '<span>' + res.nome
+					'</span>'
+
+					let preco = '<span class="m-text17">R$ ' + res.preco
+					'</span>'
+
+					let fornecedor = '<p class="s-text8 p-t-10">' + res.nomeFantasia
+					'</p>'
+
+					let codigoProduto = '<span class="s-text8 m-r-35">SKU:' + res.idProduto
+					'</span>'
+
+
+					let desc = res.descricao;
+
+					if (desc != null) {
+						descricao = '<div class="dropdown-content dis-none p-t-15 p-b-23">' +
+							'<p class="s-text8">' + res.descricao
+						'</p>' +
+							'</div>'
+					}
+
+					let infoProduto = '<input type="hidden" class="form-control" id="idProduto" value="' + res.idProduto + '">' +
+						'<input type="hidden" class="form-control" id="nome" value="' + res.nome + '">' +
+						'<input type="hidden" class="form-control" id="urlImg" value="' + res.urlImg + '">' +
+						'<input type="hidden" class="form-control" id="preco" value="' + res.preco + '">' +
+						'<input type="hidden" class="form-control" id="idFornecedor" value="' + res.idFornecedor + '">' +
+						'<input type="hidden" class="form-control" id="nomeFantasia" value="' + res.nomeFantasia + '">'
+
+					document.getElementById('nome-produto').innerHTML = nome;
+					document.getElementById('preco-produto').innerHTML = preco;
+					document.getElementById('nome-fornecedor').innerHTML = fornecedor;
+					document.getElementById('img-produto').innerHTML = recebe;
+					document.getElementById('codigo-produto').innerHTML = codigoProduto;
+					document.getElementById('descricao').innerHTML = descricao;
+					document.getElementById('carrinho').innerHTML = infoProduto;
+
+				})
+		}
+
+
+		var c = JSON.parse(sessionStorage.getItem("carrinho"));
+		if (!c) {
+			var carrinho = [];
+		} else {
+			var carrinho = c;
+		}
+		console.log(carrinho);
+		function addCar() {
+			aqui.qtd = document.getElementById('quantidade').value;
+			carrinho.push(aqui);
+			sessionStorage.setItem("carrinho", JSON.stringify(carrinho));
+			var d = JSON.parse(sessionStorage.getItem("carrinho"));
+			console.log("carrinho", d);
+		}
+
+
+
+	</script>
+
+	<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+	<script type="text/javascript" src="js/config-carrinho.js"></script>
+	<script type="text/javascript" src="js/main-carrinho.js"></script>
+
+</body>
+
+</html>
